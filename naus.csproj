@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <ProjectGuid>{A2C40C48-53FC-48B4-BDD9-17E9FF659C8C}</ProjectGuid>
+    <ProjectTypeGuids>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>naus</RootNamespace>
+    <AssemblyName>naus</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ApplicationIcon>ikona.ico</ApplicationIcon>
+    <NoWin32Manifest>False</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Prefer32Bit>True</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocX">
+      <HintPath>..\..\..\..\Desktop\DocX.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="Mono.Security">
+      <HintPath>..\packages\Npgsql.2.2.5\lib\net45\Mono.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Npgsql">
+      <HintPath>..\packages\Npgsql.2.2.5\lib\net45\Npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="autorizacija.cs" />
+    <Compile Include="autorizacija.Designer.cs">
+      <DependentUpon>autorizacija.cs</DependentUpon>
+    </Compile>
+    <Compile Include="datu_ielade.cs" />
+    <Compile Include="datu_ielade.Designer.cs">
+      <DependentUpon>datu_ielade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="db.cs" />
+    <Compile Include="kursu_apmeklejumi.cs" />
+    <Compile Include="kursu_apmeklejumi.Designer.cs">
+      <DependentUpon>kursu_apmeklejumi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="macibspeks.cs" />
+    <Compile Include="macibspeks.Designer.cs">
+      <DependentUpon>macibspeks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="macibspeku_ievade.cs" />
+    <Compile Include="macibspeku_ievade.Designer.cs">
+      <DependentUpon>macibspeku_ievade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nodarbibu_ievade.cs" />
+    <Compile Include="nodarbibu_ievade.Designer.cs">
+      <DependentUpon>nodarbibu_ievade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="nod_grupu_ievade.cs" />
+    <Compile Include="nod_grupu_ievade.Designer.cs">
+      <DependentUpon>nod_grupu_ievade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="paroles_maina.cs" />
+    <Compile Include="paroles_maina.Designer.cs">
+      <DependentUpon>paroles_maina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="studejoso_ievade.cs" />
+    <Compile Include="studejoso_ievade.Designer.cs">
+      <DependentUpon>studejoso_ievade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studenta_apmeklejumi.cs" />
+    <Compile Include="studenta_apmeklejumi.Designer.cs">
+      <DependentUpon>studenta_apmeklejumi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="students.cs" />
+    <Compile Include="students.Designer.cs">
+      <DependentUpon>students.cs</DependentUpon>
+    </Compile>
+    <Compile Include="studentu_gr_apmeklejumi.cs" />
+    <Compile Include="studentu_gr_apmeklejumi.Designer.cs">
+      <DependentUpon>studentu_gr_apmeklejumi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stud_kursu_ievade.cs" />
+    <Compile Include="stud_kursu_ievade.Designer.cs">
+      <DependentUpon>stud_kursu_ievade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="stud_prog_ievade.cs" />
+    <Compile Include="stud_prog_ievade.Designer.cs">
+      <DependentUpon>stud_prog_ievade.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vadiba.cs" />
+    <Compile Include="vadiba.Designer.cs">
+      <DependentUpon>vadiba.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="autorizacija.resx">
+      <DependentUpon>autorizacija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="datu_ielade.resx">
+      <DependentUpon>datu_ielade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kursu_apmeklejumi.resx">
+      <DependentUpon>kursu_apmeklejumi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="macibspeks.resx">
+      <DependentUpon>macibspeks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="macibspeku_ievade.resx">
+      <DependentUpon>macibspeku_ievade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nodarbibu_ievade.resx">
+      <DependentUpon>nodarbibu_ievade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="nod_grupu_ievade.resx">
+      <DependentUpon>nod_grupu_ievade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="paroles_maina.resx">
+      <DependentUpon>paroles_maina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studejoso_ievade.resx">
+      <DependentUpon>studejoso_ievade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studenta_apmeklejumi.resx">
+      <DependentUpon>studenta_apmeklejumi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="students.resx">
+      <DependentUpon>students.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="studentu_gr_apmeklejumi.resx">
+      <DependentUpon>studentu_gr_apmeklejumi.Designer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stud_kursu_ievade.resx">
+      <DependentUpon>stud_kursu_ievade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stud_prog_ievade.resx">
+      <DependentUpon>stud_prog_ievade.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vadiba.resx">
+      <DependentUpon>vadiba.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
